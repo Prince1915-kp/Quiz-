@@ -7,7 +7,7 @@ user = []
 def play():
 	print("\n==========PRINCE SWARNKAR==========")
 	score = 0
-	with open("assets/questions.json", 'r+') as f:
+	with open("questions.json", 'r+') as f:
 		j = json.load(f)
 		for i in range(10):
 			no_of_questions = len(j)
@@ -52,7 +52,7 @@ def createAccount():
 	print("\n==========CREATE ACCOUNT==========")
 	username = input("Enter your USERNAME: ")
 	password = getpass.getpass(prompt= 'Enter your PASSWORD: ')
-	with open('assets/user_accounts.json', 'r+') as user_accounts:
+	with open('user_accounts.json', 'r+') as user_accounts:
 		users = json.load(user_accounts)
 		if username in users.keys():
 			print("An account of this Username already exists.\nPlease enter the login panel.")
